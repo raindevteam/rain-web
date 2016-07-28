@@ -10,7 +10,7 @@ class Rainweb extends Module {
 
         this.msgs = [];
 
-        app.listen('3000');
+        app.listen('8080');
         app.context.settings.botver = "0.6.0-alpha.1 (Mister Peace)";
 
         io.shoutout.on("last-20", (ctx, data) => {
