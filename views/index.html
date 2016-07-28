@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="stylesheets/shoutout.css">
+<link rel="stylesheet" href="stylesheets/index.css">
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("jquery", "1.4.2");
+  </script>
+   <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="javascripts/shoutout.js"></script>
+{% endblock %}
+
+{% block content %}
+  <section id="main">
+    <div id="header" class=container>
+      <header id="home">RAIN</header>
+      <p>
+        <span id=tagline>
+          A multi-purpose IRC library written in Go for quickly developing useful IRC bots
+        </span>
+      </p>
+      <p>Website powered by RainBot from the irc.canternet.org server<p>
+      <p>Current Running Version: <span id=ver>{{ botver }}</span></p>
+    </div>
+
+    <div id=shout class=container>
+      <div id="title">
+        SHOUTS FROM CANTERNET
+      </div>
+
+      <div id="view">
+        <div id="messages"></div>
+      </div>
+    </div>
+
+    <div id=description class=container>
+      <h2>WHAT IS RAIN?</h2>
+      <p>
+      Rain(Bot) was essentially just another IRC bot. However, the goal now is to give a user an API, 
+      or rather a framework, that they can leverage to quickly develop IRC bots, simple or complex. 
+      </p>
+
+      <h2>WHAT ISN'T RAIN?</h2>
+      <p>
+      Stable, that's for sure. Also, not a goto irc bot for simple users. At least not yet, we have
+      been trying to keep the bot simple to use and as a matter of fact, a small one command bot can
+      probably be feasible under 50 lines of code. But the library is still not user friendly, and
+      debugging anything in RPC/Module territory requires some understanding of the bot's internals.
+      For now test users are very much welcomed, and once we hit the 1.0.0 release mark, we'll hope to
+      have plenty for the casual users.
+      </p>
+    </div>
+  </section>  
+{% endblock %}

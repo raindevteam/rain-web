@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400italic|Megrim|Nova+Square');
+@import url('http://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Maven+Pro:500');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: hsla(173, 0%, 18%, 1);
+}
+
+nav {
+  display: inline-block;
+  position: fixed;
+  width: 160px;
+  min-height: 100%;
+  background-color: hsla(184, 0%, 11%, 1);
+  /* border-right: 2px solid hsla(183, 23%, 32%, 1);*/
+
+  img {
+    display: block;
+    margin: auto;
+    margin-top: 110px;
+    margin-bottom: 90px;
+    width: 100px;
+  }
+}
+
+nav ul {
+  margin-top: 10px;
+  list-style-type: none;
+
+  li {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+
+    a {
+      display: block;
+      text-decoration: none;
+      font-family: Raleway;
+      font-size: 15px;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+      color: white;
+    }
+
+    a.selected {
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+      border-right: 10px solid hsla(194, 13%, 60%, 1);
+    }
+
+    a:hover {
+      background-color: hsla(194, 13%, 60%, 1);
+    }
+  }
+}
+
+#main {
+    margin-left: 160px;
+    padding-top: 90px;
+    padding-left: 80px;
+    height: 100%;
+
+    margin-right: 25%;
+    min-width: 1000px;
+
+    background-color: hsla(173, 0%, 18%, 1);
+
+    font-family: roboto;
+    font-size: 17px;
+    color: hsla(178, 0%, 72%, 1);
+    line-height: 24px;
+
+    box-sizing: border-box;
+}
+
+#main header {
+  display: inline-block;
+
+  font-family: Raleway;
+  font-size: 50px;
+  color: hsla(178, 0%, 72%, 1);
+  line-height: 80px;
+}
+
+#main a {
+  text-decoration: none;
+  color: hsla(183, 95%, 65%, 1);
+}
+
+#main a.anchor {
+  text-decoration: none;
+}
+
+#main h2 {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 300;
+  color: hsla(194, 13%, 60%, 1);
+  line-height: 35px;
+  text-decoration: none;
+
+  border-left: 6px solid hsla(178, 0%, 10%, 1);
+}
+
+#main h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color: white;
+}
+
+.text p {
+  margin-bottom: 15px;
+}
+
+.text table {
+  border-collapse: collapse;
+}
+
+.text table tr td {
+  font-family: Ubuntu Mono;
+  text-align: center;
+  margin: 0;
+  min-width: 250px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.text table tr td:first-child:hover {
+  background-color: hsla(178, 0%, 15%, 1);
+  cursor: pointer;
+}
+
+.text table tr td a {
+  display: block;
+  color: white;
+  width: inherit;
+  padding: 5px;
+}
+
+.text table tr td a:focus {
+  outline: none;
+}
+
+.text table tr td:last-child {
+  font-family: Roboto;
+  text-align: left;
+  padding-left: 7px;
+}
+
+
+.text table tr:last-child {
+  margin: 0;
+  padding: 5px;
+  width: 450px;
+}
+
+.text table tr.header td:first-child:hover {
+  background-color: hsla(184, 0%, 11%, 1);
+  cursor: default;
+}
+
+.text table tr.header td {
+  background-color: hsla(184, 0%, 11%, 1);
+  font-family: Raleway;
+  color: white;
+  padding: 5px;
+}
+
+.text ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}

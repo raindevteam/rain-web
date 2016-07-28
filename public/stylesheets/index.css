@@ -1,0 +1,23 @@
+div#header {
+  float: left;
+  background-color: #465857;
+  padding: 15px;
+  width: 72%;
+  height: 300px;
+  box-sizing: border-box;
+}
+header#home {
+  color: #141414;
+}
+div#description {
+  padding-top: 13px;
+  clear: both;
+}
+span#tagline {
+  color: #fff;
+  font-size: 18px;
+}
+span#ver {
+  font-size: 18px;
+  color: #000;
+}

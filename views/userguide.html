@@ -1,0 +1,153 @@
+{% extends 'layout.html' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" src="stylesheets/style.css">
+{% endblock %}
+
+{% block content %}
+  <section id="main" class="text">
+    <header>USER GUIDE</header>
+    <p>
+      This guide aims to be a somewhat detailed overview about the commands
+      and features of Rainbot. However development of the bot is rapid, and
+      and keeping documentation in check can be rather slow, so don't always
+      expect this to be 100% up-to-date with releases.
+    </p>
+    <h2>Commands and Triggers</h2>
+    <h3>Commands</h3>
+    <p>
+      Messages proceeded by the bot's nick or the command symbol will
+      be taken as direct commands. For example, if the bot's nick is
+      'RainBot' and the command symbol in the config is '$', then 'RainBot, ;say this'
+      and '$ ;say this' would both be valid triggers assuming your command prefix
+      has been set to ';'.
+    </p>
+    <p>
+      If you type just a command name like ';say', then that will also trigger as a command, so
+      you don't necessarily have to use a command line prefix as in the previous examples.
+    </p>
+    <h3>Triggers</h3>
+    <p>
+      Triggers fire separately from commands, which is important to note if you're developing
+      trigger meant to be fired over commands (you would need to use the onCommand property).
+      Triggers will only fire if their appropriate trigger function returns true.
+    </p>
+    <h2>Included Base Modules</h2>
+    <p>
+      The included base modules should help you get started with using the bot
+      in your own channel. The RainCore module also provides some commands to
+      manage the bot. However, if you wish to create your own management module,
+      you are more than welcomed, and if you wish, you can use RainCore as a guide.
+    </p>
+    <h3>RainCore Module</h3>
+    <p>
+      As mentioned, the RainCore module adds some management commands and some
+      somewhat useful commands. It also includes the alias command, so if you remove
+      this module, expect to lose aliasing as well unless reimplemented (and like I
+      said, if you want your own core module, go ahead and use what you want from here in your own).
+    </p>
+    <table>
+      <tr class="header">
+        <td>Command</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a id="#help" href="#help" class="c">;help [command]</a></td>
+        <td>Links you to this page, or displays help text of command.</td>
+      </tr>
+      <tr>
+        <td><a id="#ver" href="#ver" class="c">;ver</a></td>
+        <td>Returns the version of the bot.</td>
+      </tr>
+      <tr>
+        <td><a id="#alias" href="#alias" class="c">;alias name [p1 [,p2]] -&gt; [c1 [, c2]]</a></td>
+        <td>Aliases command(s) to the given name</td>
+      </tr>
+      <tr>
+        <td><a id="#chan" href="#chan" class="c">;chan leave | join chan[:pass]</a></td>
+        <td>Allows the bot to join and leave channels.</td>
+      </tr>
+    </table>
+    <h3>RainChat Module</h3>
+    <p>The RainChat module provides a few commands for socialness.</p>
+    <table>
+      <tr class="header">
+        <td>Command</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a id="#say" href="#say" class="c">;say [text]</a></td>
+        <td>Repeats what you place in for text.</td>
+      </tr>
+      <tr>
+        <td><a id="#do" href="#do" class="c">;do [action]</a></td>
+        <td>Repeats what you place for action, as an action.</td>
+      </tr>
+      <tr>
+        <td><a id="#blog" href="#blog" class="c">;blog</a></td>
+        <td>Links the blog site for RainBot's development.</td>
+      </tr>
+      <tr>
+        <td><a id="#rules" href="#rules" class="c">;rules</a></td>
+        <td>Gives you rules, one way or another (For SRQ's Constellation).</td>
+      </tr>
+    </table>
+    <h3>RainCal Module</h3>
+    <p>
+      With the power of the mathjs library (http://mathjs.org), RainBot can parse equations and store
+      user defined functions.
+    </p>
+    <table>
+      <tr class="header">
+        <td>Command</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a id="#cal" href="#cal" class="c">;cal [equation]</a></td>
+        <td>Parses the given equation.</td>
+      </tr>
+    </table>
+    <h3>RainBrella Module</h3>
+    <p>
+      The RainBrella module implements random utilities.
+    </p>
+    <table>
+      <tr class="header">
+        <td>Command</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a id="#echo" href="#echo" class="c">;echo [text]</a></td>
+        <td>Repeats what you pass in for text (not immediately like say).</td>
+      </tr>
+      <tr>
+        <td><a id="#roll" href="#roll" class="c">;roll [&lt;n1&gt;r [, &lt;n2&gt;d [, &lt;n3&gt;p]]]</a></td>
+        <td>Rolls for n1 times, with a n2 die in n3 pairs</td>
+      </tr>
+      <tr>
+        <td><a id="#jip" href="#jip" class="c">;jip</a></td>
+        <td>Evaluates javascript and returns value.</td>
+      </tr>
+    </table>
+    <h2>Other Modules</h2>
+    <p>
+      All of the following modules you can find on my Github and
+      use at your leisure.
+    </p>
+    <h3>RainShow Module</h3>
+    <p>
+      The RainShow module provides a command that randomly picks an episode from
+      MLP and can also tell you the title if given a two pair key.
+    </p>
+    <table>
+      <tr class="header">
+        <td>Command</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a id="#ep" href="#ep" class="c">;ep [s e]</a></td>
+        <td>Gives you a random episode to watch.</td>
+      </tr>
+    </table>
+  </section>
+{% endblock %}

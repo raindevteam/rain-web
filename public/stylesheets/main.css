@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400italic|Megrim|Nova+Square");
+@import url("http://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Maven+Pro:500");
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background-color: #2e2e2e;
+}
+nav {
+  display: inline-block;
+  position: fixed;
+  width: 160px;
+  min-height: 100%;
+  background-color: #1c1c1c;
+/* border-right: 2px solid hsla(183, 23%, 32%, 1);*/
+}
+nav img {
+  display: block;
+  margin: auto;
+  margin-top: 110px;
+  margin-bottom: 90px;
+  width: 100px;
+}
+nav ul {
+  margin-top: 10px;
+  list-style-type: none;
+}
+nav ul li {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-family: Raleway;
+  font-size: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+}
+nav ul li a.selected {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-right: 10px solid #8ca0a6;
+}
+nav ul li a:hover {
+  background-color: #8ca0a6;
+}
+#main {
+  margin-left: 160px;
+  padding-top: 90px;
+  padding-left: 80px;
+  height: 100%;
+  margin-right: 25%;
+  min-width: 1000px;
+  background-color: #2e2e2e;
+  font-family: roboto;
+  font-size: 17px;
+  color: #b8b8b8;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+#main header {
+  display: inline-block;
+  font-family: Raleway;
+  font-size: 50px;
+  color: #b8b8b8;
+  line-height: 80px;
+}
+#main a {
+  text-decoration: none;
+  color: #51f2fb;
+}
+#main a.anchor {
+  text-decoration: none;
+}
+#main h2 {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 300;
+  color: #8ca0a6;
+  line-height: 35px;
+  text-decoration: none;
+  border-left: 6px solid #1a1a1a;
+}
+#main h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color: #fff;
+}
+.text p {
+  margin-bottom: 15px;
+}
+.text table {
+  border-collapse: collapse;
+}
+.text table tr td {
+  font-family: Ubuntu Mono;
+  text-align: center;
+  margin: 0;
+  min-width: 250px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.text table tr td:first-child:hover {
+  background-color: #262626;
+  cursor: pointer;
+}
+.text table tr td a {
+  display: block;
+  color: #fff;
+  width: inherit;
+  padding: 5px;
+}
+.text table tr td a:focus {
+  outline: none;
+}
+.text table tr td:last-child {
+  font-family: Roboto;
+  text-align: left;
+  padding-left: 7px;
+}
+.text table tr:last-child {
+  margin: 0;
+  padding: 5px;
+  width: 450px;
+}
+.text table tr.header td:first-child:hover {
+  background-color: #1c1c1c;
+  cursor: default;
+}
+.text table tr.header td {
+  background-color: #1c1c1c;
+  font-family: Raleway;
+  color: #fff;
+  padding: 5px;
+}
+.text ul {
+  list-style-position: inside;
+  padding-left: 20px;
+}
