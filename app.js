@@ -10,7 +10,7 @@ const path   = require('path');
 var app = koa();
 
 app.use(logger())
-
+app.context.settings = {}
 
 // Render with swig
 app.context.render = render({
@@ -27,7 +27,6 @@ app.use(stylus({
 
 app.use(serve(__dirname + '/public'));
 
-app.context.settings = {}
 app.context.settings.menu = {
   'Home'        : '/',
   'RML'         : '/rml',

@@ -1,4 +1,4 @@
-socket = io.connect('http://localhost:3000/shoutout')
+socket = io.connect('http://localhost:8080/shoutout')
 var connected = false;
 var view      = $('#view');
 
