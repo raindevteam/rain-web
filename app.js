@@ -49,8 +49,10 @@ app.use(index.routes());
 app.use(about.routes());
 app.use(userguide.routes());
 
+// If main module, run web server
 if (require.main == module) {
   app.listen('8080');
+// If ran as module, export app
 } else {
   module.exports = app;
 }
