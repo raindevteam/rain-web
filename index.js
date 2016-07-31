@@ -37,16 +37,10 @@ class Rainweb extends Module {
 if (require.main === module) {
     const m = new Rainweb();
 
-    m.initialize()
-    .then(() => {
-        m.addCommand('shout', {
-            Help: "Shout at the skies",
-            Fun: m.shoutout
-        })
-
-        m.register();
+    m.addCommand('shout', {
+        Help: "Shout at the skies",
+        Fun: m.shoutout
     })
-    .fail((error) => {
-        console.error(error);
-    });
+
+    m.register(process.argv);
 }
