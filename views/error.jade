@@ -9,3 +9,15 @@ block content
       .header= error.status
       img(src='images/confuss.png', alt='Confused Rainbow Dash')
       p= error.message
+
+{% extends 'layout.html' %}
+
+{% block content %}
+  <section id="main" class="container">
+    <error-box>
+      <header class="header">ABOUT</header>
+      <p>
+        RainBot and this website itself is being redeveloped from the ground up.
+      </p>
+    <error-bot>
+{% endblock %}
