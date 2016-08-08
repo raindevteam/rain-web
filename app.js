@@ -44,10 +44,12 @@ const index     = require(__dirname + '/routes/index');
 const about     = require(__dirname + '/routes/about');
 const userguide = require(__dirname + '/routes/userguide');
 const rml       = require(__dirname + '/routes/rml');
+const fedora    = require(__dirname + '/routes/fedora');
 
 app.use(index.routes());
 app.use(about.routes());
 app.use(userguide.routes());
+app.use(fedora.routes())
 
 // If main module, run web server
 if (require.main == module) {
