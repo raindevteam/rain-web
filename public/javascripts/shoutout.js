@@ -32,7 +32,6 @@ function displayMessage(data, el) {
   );
 
   if (canScroll) {
-    console.log('isbottom');
     view.animate({
       scrollTop: el[0].scrollHeight
     }, 1);
